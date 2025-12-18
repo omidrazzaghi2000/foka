@@ -15,6 +15,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { scrollToTop } from "../../constants/scrollToTop";
 import { partnerBrands } from "../../constants/partnerBrands";
 import { useToast } from "@chakra-ui/react";
+import Counter from "./Counter";
+
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -40,8 +42,8 @@ const HomePage = () => {
     }
   };
   return (
-    <div className=" w-full overflow-hidden">
-      <div className="  flex bg-[url('/hero-bg-image.jpg')] pt-36 pb-20 bg-top bg-no-repeat bg-cover  ">
+    <div className=" w-full overflow-hidden" style={{direction:"rtl"}}>
+      <div className="  flex bg-[url('/hero-bg.jpg')] pt-36 pb-20 bg-top bg-no-repeat bg-cover  ">
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -52,18 +54,18 @@ const HomePage = () => {
         >
           <motion.h1
             variants={animationVariants.fadeLeft}
-            className="text-6xl max-lg:mx-auto font-semibold max-sm:text-4xl max-w-lg "
-          >
-            Discover Most Suitable Property
+            style={{fontFamily:"Koloche"}}
+            className="text-center text-6xl max-lg:mx-auto font-semibold max-sm:text-4xl  "
+            >
+           فکاتجارت
           </motion.h1>
           <motion.p
             variants={animationVariants.fadeLeft}
-            className="text-xl max-lg:mx-auto max-w-md  "
+            className="text-xl max-lg:mx-auto   "
           >
-            Our mission is to engage in issues that are of concern to
-            individuals
+            فکاتجارت ما زیست‌توده را به بیوچار ارزشمند تبدیل می‌کنند که کربن اتمسفر را حذف می‌کند - آسیب‌های زیست‌محیطی را از بین می‌برد و انرژی سبز تولید می‌کند.
           </motion.p>
-          <motion.div
+          {/* <motion.div
             variants={animationVariants.fadeLeft}
             id="search-inp"
             className="max-w-xl max-lg:mx-auto max-lg:w-full relative"
@@ -89,36 +91,69 @@ const HomePage = () => {
               styles={{ top: 9.5 }}
               onClick={handleSearch}
             />
-          </motion.div>
+          </motion.div> */}
           <motion.div
             variants={animationVariants.fadeLeft}
-            className="flex max-lg:flex-col max-lg:items-center gap-10 w-full justify-between items-end mt-4"
+            className=" max-lg:flex-col max-lg:items-center gap-10 w-full justify-between items-end mt-4"
           >
-            <div className="flex gap-12">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-4xl title-font font-bold">19K+</h2>
-                <p className="text-lg">Premium houses</p>
+            
+            <div className="flex gap-12 max-sm:flex-wrap  justify-center">
+              <div className="flex justify-start items-center gap-2 bg-green-900 p-4 rounded">
+                <img className="w-20 ml-2" src="/third.svg" alt="img" />
+                <h2 className="text-lg"><h1 style={{fontFamily:"Koloche"}} className="text-xl">مقرون به صرفه</h1>
+زمان بازگشت سرمایه مشتریان CarboFlow نصف سایر پروژه‌ها است.</h2>
               </div>
-              <div className="flex flex-col gap-4">
-                <h2 className="text-4xl title-font font-bold">5000+</h2>
-                <p className="text-lg">Premium houses</p>
+              <div className="flex justify-start items-center gap-2 bg-green-900 p-4 rounded">
+                <img className="w-20 ml-2" src="/second.png" alt="img" />
+                <h2 className="text-lg"><h1 style={{fontFamily:"Koloche"}} className="text-xl"> همه کاره</h1>
+CarboFlow قادر است طیف وسیعی از مواد اولیه را پیرولیز کند.</h2>
+              </div>
+              <div className="flex justify-start items-center gap-2 bg-green-900 p-4 rounded">
+                <img className="w-20 ml-2" src="/first.webp" alt="img" />
+                <h2 className="text-lg"><h1 style={{fontFamily:"Koloche"}} className="text-xl">ظرفیت بالا</h1>
+توان عملیاتی تا ۷۵۰ کیلوگرم در ساعت، و به راحتی می‌توان ظرفیت را افزایش یا کاهش داد.</h2>
               </div>
             </div>
-            <div className="flex gap-12 max-sm:flex-wrap  justify-center">
-              <div className="flex justify-start items-center gap-2">
-                <img className="w-9" src="/grafton.png" alt="img" />
-                <h2 className="text-2xl">Grafton</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-10 w-full justify-items-center">
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={4} duration={2} />
+                </h2>
+                <p className="text-lg">سایت فعال یا در حال ساخت</p>
               </div>
-              <div className="flex justify-start items-center gap-2">
-                <img className="w-9" src="/lighthouse.png" alt="img" />
-                <h2 className="text-2xl">Lighthouse</h2>
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={3000} duration={2}  />
+                </h2>
+                <p className="text-lg">تن CO2e حذف شده در هر واحد در سال</p>
               </div>
-              <div className="flex justify-start items-center gap-2">
-                <img className="w-9" src="/tundratown.png" alt="img" />
-                <h2 className="text-2xl">Tundratown</h2>
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={750} duration={2}  />
+                </h2>
+                <p className="text-lg">کیلوگرم در ساعت ورودی هر واحد</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={1500} duration={2}  />
+                </h2>
+                <p className="text-lg">تن بیوچار در هر واحد در سال</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={3} duration={2} />
+                </h2>
+                <p className="text-lg">سال بازگشت سرمایه برای بسیاری از پروژه‌ها</p>
+              </div>
+              <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-4xl title-font font-bold">
+                  <Counter to={100} duration={2} suffix="%" />
+                </h2>
+                <p className="text-lg">انرژی تجدیدپذیر</p>
               </div>
             </div>
           </motion.div>
+          
         </motion.div>
 
         {/* </Reveal> */}

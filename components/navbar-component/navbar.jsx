@@ -20,7 +20,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
   const { cartItems, setCartItems, addToCart, modal, setModal } =
     useContext(CartContext);
   const [whenScroll, setWhenScroll] = useState("bg-transparent");
-  const [logo, setlogo] = useState("/Homyz-logo.png");
+  const [logo, setlogo] = useState("/logo.png");
   const [textColor, setTextColor] = useState("text-white");
   const [showcaseDropDown, setShowcaseDropDown] = useState(false);
   const [viewSideNav, setViewSideNav] = useState(false);
@@ -33,12 +33,12 @@ const NavBar = ({ navBar2, showCase1Page }) => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
         setWhenScroll("bg-white");
-        setlogo("/Homyz-logo2.png");
+        setlogo("/logo.png");
         setTextColor("text-black");
       } else {
         setWhenScroll("transparent");
         setTextColor("text-white");
-        setlogo("/Homyz-logo.png");
+        setlogo("/logo.png");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -147,7 +147,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                                       arr.splice(i, 1);
                                       setCartItems([...arr]);
                                     }}
-                                    className="text-lg w-fit hover:text-black transition-all duration-300 cursor-pointer text-red-500 hover mt-3"
+                                    className="text-lg w-fit hover:text-black transition-all duration-300 cursor-pointer text-green-500 hover mt-3"
                                   >
                                     remove
                                   </p>
@@ -191,7 +191,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                 <div className="p-6 pt-0 bg-white max-sm:pt-6 flex max-sm:fixed bottom-0 left-0 right-0 flex-col gap-5">
                   <div className="flex justify-between items-center">
                     <h2>Subtotal</h2>
-                    <p className="total text-red-500">
+                    <p className="total text-green-500">
                       PKR {formatCompactNumber(subTotal)}
                     </p>
                   </div>
@@ -203,7 +203,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                     padding={"py-2"}
                   />
                   {checkOut ? (
-                    <p className="text-red-500">
+                    <p className="text-green-500">
                       Checkout is disabled on this site.
                     </p>
                   ) : (
@@ -238,9 +238,9 @@ const NavBar = ({ navBar2, showCase1Page }) => {
         >
           <Link onClick={scrollToTop} to="/">
             <img
-              src={navBar2 ? "/Homyz-logo2.png" : logo}
-              className="w-44 max-lg:w-36"
-              alt="Homyz-logo"
+              src={navBar2 ? "/logo.png" : logo}
+              className="w-16 max-lg:w-16"
+              alt="logo"
             />
           </Link>
           <ul
@@ -254,21 +254,24 @@ const NavBar = ({ navBar2, showCase1Page }) => {
           >
             <Link
               onClick={scrollToTop}
-              className="hover:text-red-500 transition-all"
-              to="/"
+              className="hover:text-green-500 transition-all"
+              to="/about"
             >
-              Home
+              درباره ما
             </Link>
+            
             <Link
               onClick={scrollToTop}
-              className="hover:text-red-500 transition-all"
+              className="hover:text-green-500 transition-all"
               to="/Services"
             >
-              Our Services
+              محصولات ما 
             </Link>
-            <div className="showcase-menu cursor-pointer hover:text-red-500 transition-all relative">
-              Show Cases
-              <div className="showcase-list hidden absolute cursor-default -left-4 ">
+            
+            
+            <div className="showcase-menu cursor-pointer hover:text-green-500 transition-all relative">
+              پروژه‌های ما
+              <div className="showcase-list hidden absolute cursor-default -left-4 " style={{direction:"rtl"}}>
                 <ul
                   style={{ border: "1px solid #e9e9e9" }}
                   className="mt-4 flex flex-col gap-2  bg-white text-black p-4 px-5 rounded-md  w-48"
@@ -276,27 +279,27 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                   <li className="listItem flex items-center gap-2 ">
                     <p
                       style={{ height: "2px" }}
-                      className="w-0 bullet-line transition-all bg-red-500"
+                      className="w-0 bullet-line transition-all bg-green-500"
                     ></p>
                     <Link
                       onClick={scrollToTop}
-                      className="hover:text-red-500 transition-all"
+                      className="hover:text-green-500 transition-all"
                       to="/showcases/showcase1"
                     >
-                      Show Case 1
+                      مقالات
                     </Link>
                   </li>
                   <li className="listItem flex items-center gap-2">
                     <p
                       style={{ height: "2px" }}
-                      className="w-0 bullet-line transition-all bg-red-500"
+                      className="w-0 bullet-line transition-all bg-green-500"
                     ></p>
                     <Link
                       onClick={scrollToTop}
-                      className="hover:text-red-500 transition-all"
+                      className="hover:text-green-500 transition-all"
                       to="/showcases/showcase2"
                     >
-                      Show Case 2
+                      گزارش‌ها
                     </Link>
                   </li>
                 </ul>
@@ -304,21 +307,21 @@ const NavBar = ({ navBar2, showCase1Page }) => {
             </div>
             <Link
               onClick={scrollToTop}
-              className="hover:text-red-500 transition-all"
-              to="/about"
+              className="hover:text-green-500 transition-all"
+              to="/"
             >
-              About
+              خانه
             </Link>
-            <div
+            {/* <div
               className="relative cursor-pointer  transition-all"
               onClick={() => {
                 setModal(true);
               }}
             >
               {totalQty > 0 ? (
-                // <div className="absolute bg-red-500 pt-[0.5px] text-white rounded-full h-[18px]   min-w-[18px] -right-[10px] text-xs font-medium text-center -top-[10px] flex justify-center items-center">
+                // <div className="absolute bg-green-500 pt-[0.5px] text-white rounded-full h-[18px]   min-w-[18px] -right-[10px] text-xs font-medium text-center -top-[10px] flex justify-center items-center">
                 <p
-                  className={`absolute bg-red-500 pt-[1.5px] text-white rounded-full h-[18px] px-1   min-w-[18px] ${
+                  className={`absolute bg-green-500 pt-[1.5px] text-white rounded-full h-[18px] px-1   min-w-[18px] ${
                     totalQty >= 100 ? "-right-[15px]" : "-right-[10px]"
                   }  text-xs font-medium text-center -top-[10px]`}
                 >
@@ -328,11 +331,11 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                 ""
               )}
               <FaShoppingCart />
-            </div>
+            </div> */}
 
             <Link onClick={scrollToTop} to="/contact">
               <Button
-                content={"Contact Us"}
+                content={"تماس با ما"}
                 fontSize={"text-xl"}
                 fontWeight={""}
                 padding={"px-5  py-2"}
@@ -344,7 +347,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
               navBar2 ? "text-black" : textColor
             } text-xl hidden max-lg:flex justify-center items-center gap-8`}
           >
-            <div
+              {/* <div
               className="relative"
               onClick={() => {
                 setModal(true);
@@ -352,7 +355,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
             >
               {totalQty > 0 ? (
                 <p
-                  className={`absolute bg-red-500 pt-[1.5px] text-white rounded-full h-[18px] px-1   min-w-[18px] ${
+                  className={`absolute bg-green-500 pt-[1.5px] text-white rounded-full h-[18px] px-1   min-w-[18px] ${
                     totalQty >= 100 ? "-right-[15px]" : "-right-[10px]"
                   }  text-xs font-medium text-center -top-[10px]`}
                 >
@@ -362,7 +365,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                 ""
               )}
               <FaShoppingCart />
-            </div>
+            </div> */}
 
             <FaBars
               onClick={() => {
@@ -392,7 +395,7 @@ const NavBar = ({ navBar2, showCase1Page }) => {
         } bg-white  left-0 w-96 p-5 px-10 max-sm:px-5 max-sm:w-80 z-30 transition-all font-medium`}
       >
         <div id="header" className="flex justify-between items-center">
-          <img className="w-36" src="/Homyz-logo2.png" alt="Homyz-logo2" />
+          <img className="w-12" src="/logo.png" alt="logo" />
           <div
             onClick={() => {
               setViewSideNav(!viewSideNav);
@@ -419,9 +422,9 @@ const NavBar = ({ navBar2, showCase1Page }) => {
               scrollToTop();
             }}
             to="/"
-            className="hover:text-red-500 transition-all"
+            className="hover:text-green-500 transition-all"
           >
-            Home
+            خانه
           </Link>
           <Link
             onClick={() => {
@@ -429,18 +432,18 @@ const NavBar = ({ navBar2, showCase1Page }) => {
               scrollToTop();
             }}
             to="/services"
-            className="hover:text-red-500 transition-all"
+            className="hover:text-green-500 transition-all"
           >
-            Our Services
+            محصولات
           </Link>
           <div className="relative">
             <div
               onClick={() => {
                 setShowcaseDropDown(!showcaseDropDown);
               }}
-              className="flex justify-between hover:text-red-500 max-sm:hover:text-black transition-all items-center cursor-pointer"
+              className="flex justify-between hover:text-green-500 max-sm:hover:text-black transition-all items-center cursor-pointer"
             >
-              <p className="transition-all">Show Cases</p>
+              <p className="transition-all">پروژه‌های ما</p>
               <FaAngleDown
                 className={`${
                   showcaseDropDown ? "-rotate-180" : "rotate-0"
@@ -455,10 +458,10 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                   hideNav();
                   scrollToTop();
                 }}
-                className="hover:text-red-500 transition-all"
+                className="hover:text-green-500 transition-all"
                 to={"/showcases/showcase1"}
               >
-                Show Cases 1
+                مقالات
               </Link>
               <Link
                 onClick={() => {
@@ -466,9 +469,9 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                   scrollToTop();
                 }}
                 to={"/showcases/showcase2"}
-                className="hover:text-red-500 transition-all"
+                className="hover:text-green-500 transition-all"
               >
-                Show Cases 2
+                گزارش‌ها
               </Link>
             </ul>
             <div
@@ -482,9 +485,9 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                   scrollToTop();
                 }}
                 to={"/about"}
-                className="hover:text-red-500 transition-all w-full block"
+                className="hover:text-green-500 transition-all w-full block"
               >
-                About
+                درباره‌ی ما
               </Link>
               <Link
                 onClick={() => {
@@ -492,10 +495,10 @@ const NavBar = ({ navBar2, showCase1Page }) => {
                   scrollToTop();
                 }}
                 to={"/contact"}
-                className="hover:text-red-500 transition-all w-full block"
+                className="hover:text-green-500 transition-all w-full block"
               >
                 <Button
-                  content={"Contact Us"}
+                  content={"تماس با ما"}
                   fontSize={""}
                   padding={"py-[6px] px-3"}
                   furtherClasses={" mt-4"}

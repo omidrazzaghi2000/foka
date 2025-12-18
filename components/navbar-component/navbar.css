@@ -2,7 +2,7 @@
   width: 12px;
 }
 .listItem:hover > a {
-  color: #ef4444;
+  color: #0ca53c;
 }
 .showcase-menu:hover > .showcase-list {
   display: block;
