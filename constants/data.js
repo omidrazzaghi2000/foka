@@ -2,14 +2,14 @@ export const rentHouses = [
   {
     id: 1,
     type: "featured",
-    mainImage: "/Rent-houses/House-1/home1-1.jpg",
+    mainImage: "/b4.jpg",
     moreImages: [
       "/Rent-houses/House-1/home1-2.jpg",
       "/Rent-houses/House-1/home1-3.jpg",
       "/Rent-houses/House-1/home1-4.jpg",
       "/Rent-houses/House-1/home1-5.jpg",
     ],
-    name: "Lahore",
+    name: "نام مقاله ۱",
     address: "DHA 9 City, Lahore, Pakistan",
     price: 130000,
     details: [
@@ -28,14 +28,14 @@ export const rentHouses = [
   {
     id: 2,
     type: "featured",
-    mainImage: "/Rent-houses/House-2/home2-1.jpg",
+    mainImage: "/b4.jpg",
     moreImages: [
       "/Rent-houses/House-2/home2-2.jpg",
       "/Rent-houses/House-2/home2-3.jpg",
       "/Rent-houses/House-2/home2-4.jpg",
       "/Rent-houses/House-2/home2-5.jpg",
     ],
-    name: "Karachi",
+    name: "نام مقاله دو",
     address: "Bahria Town, Karachi, Pakistan",
     price: 100000,
     details: [

@@ -70,7 +70,7 @@ const HomePage = () => {
             id="search-inp"
             className="max-w-xl max-lg:mx-auto max-lg:w-full relative"
           >
-            <FaPeriscope className="text-red-500 text-2xl absolute left-2 top-5 " />
+            <FaPeriscope className="text-green-500 text-2xl absolute left-2 top-5 " />
             <input
               placeholder="Search..."
               onKeyDown={(e) => {
@@ -171,10 +171,11 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
               variants={animationVariants.zoomOut}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <h2 className="text-5xl max-md:text-4xl font-bold title-font">
+              {/* <h2 className="text-5xl max-md:text-4xl font-bold title-font">
                 We build quality real estate projects
-                <span className=" text-red-500 title-font "> since 1998</span>
-              </h2>
+                <span className=" text-green-500 title-font "> since 1998</span>
+              </h2> */}
+              <img src="/second-hero.webp" style={{borderRadius:"10%"}}></img>
             </motion.div>
           </div>
           <div className="w-2/4 max-md:w-full">
@@ -184,15 +185,16 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
               variants={animationVariants.fadeRight}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <p className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                itaque nesciunt similique dolore illum eaque repellat eligendi
-                nemo odit fugit in, impedit ad excepturi architecto dolores
-                quaerat accusantium! Sapiente, repellendus!
+              <h2 className="text-5xl max-md:text-4xl font-bold title-font">
+دستگاه پیرولیز CarboFlow
+              </h2>
+              <p className="text-xl pt-5" style={{textAlign:"justify"}}>
+                با بهره‌گیری از تجربیات خود به عنوان یک توسعه‌دهنده پروژه، ما تجربه دست اولی از آنچه برای عملی کردن پروژه‌های پیرولیز واقعاً مورد نیاز است، داریم. فناوری پیرولیز CarboFlow ما به گونه‌ای ساخته شده است که مقرون به صرفه، همه‌کاره و با ظرفیت بالا باشد، در حالی که بالاترین استانداردهای بیوچار و بازیابی انرژی را ارائه می‌دهد.
+توانایی کار با انواع خوراک‌ها، زمان تولید و هزینه تولید، همگی چالش‌هایی هستند که ما در طراحی CarboFlow به آنها پرداخته‌ایم. با فناوری خود، امیدواریم که اجرای پروژه‌هایی را که صنعت پیرولیز زیست‌توده را به پتانسیل کامل خود نزدیک‌تر می‌کنند، تسریع کنیم.
               </p>
               <Link onClick={scrollToTop} to={"/about"}>
                 <Button
-                  content={"About Us"}
+                  content={"درباره ما"}
                   fontSize={"text-xl"}
                   padding={"px-5  py-2"}
                   furtherClasses={"mt-8"}
@@ -216,19 +218,17 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
             className="w-1/3 max-lg:w-full max-lg:text-center flex flex-col gap-2 items-start max-lg:items-center"
           >
             <h2 className="text-5xl max-md:text-4xl font-bold title-font">
-              What we do
+              چرا ما ؟ 
             </h2>
             <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur. Malesuada vehicula netus
-              urna in elit amet blandit enim lacinia. Tellus leo felis et vel
-              eget maecenas.
+              تهیه و تلاش در اشتراک  
             </p>
             <Link onClick={scrollToTop} to={"/about"}>
               <button
                 style={{ borderWidth: 1.5, borderRadius: 4 }}
-                className="bg-transparent  text-black border-red-500 text-xl px-5 py-2 duration-300 hover:bg-red-500 hover:text-white transition-all mt-5 max-md:mt-3"
+                className="bg-transparent  text-black border-green-500 text-xl px-5 py-2 duration-300 hover:bg-green-500 hover:text-white transition-all mt-5 max-md:mt-3"
               >
-                About Us
+                درباره‌ی ما
               </button>
             </Link>
           </motion.div>
@@ -244,17 +244,17 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
               <WhatWeDoCard
                 iconSrc={"/icons/reliability.png"}
                 iconAlt={"reliability"}
-                title={"Reliability"}
+                title={"قابل اطمینان"}
                 desc={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio, nemo libero deleniti quibusdam quia!"
+                  "ما با ارائه خدمات با کیفیت بالا، اطمینان حاصل می‌کنیم که مشتریان ما از خدمات ما راضی باشند."
                 }
               />
               <WhatWeDoCard
                 iconSrc={"/icons/communication.png"}
                 iconAlt={"communication"}
-                title={"communication"}
+                title={"پشتیبانی حرفه‌ای"}
                 desc={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio, nemo libero deleniti quibusdam quia!"
+                  "ما تیم پشتیبانی ما با تجربه و دانش متخصص در زمینه‌ی پیرولیز، آماده به ارائه خدمات پشتیبانی حرفه‌ای برای شماست."
                 }
               />
             </div>
@@ -266,9 +266,9 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
               <WhatWeDoCard
                 iconSrc={"/icons/quality-first.png"}
                 iconAlt={"quality-first"}
-                title={"Quality First"}
+                title={"کیفیت بالا"}
                 desc={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio, nemo libero deleniti quibusdam quia!"
+                  "ما با ارائه خدمات با کیفیت بالا، اطمینان حاصل می‌کنیم که مشتریان ما از خدمات ما راضی باشند."
                 }
               />
               <div
@@ -278,6 +278,164 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
             </div>
           </motion.div>
         </div>
+
+        {/* green process section start */}
+        <div style={{ maxWidth: 1200 , display:"none"}} className="p-10 max-md:px-5 mx-auto">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ staggerChildren: 0.1 }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          >
+            {/* Biomass card */}
+            <motion.div
+              variants={animationVariants.fadeLeft}
+              className="bg-green-900 text-white rounded-3xl p-6 flex flex-col justify-between"
+              style={{ direction: "rtl" }}
+            >
+              <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="flex items-center gap-3">
+                    <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center">
+                      <img src="/placeholders/forestry.svg" alt="forestry" className="w-7 h-7 opacity-80" />
+                    </span>
+                    <span className="text-sm">پسماند جنگلی</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center">
+                      <img src="/placeholders/waste-biomass.svg" alt="waste-biomass" className="w-7 h-7 opacity-80" />
+                    </span>
+                    <span className="text-sm">زیست‌توده زائد</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center">
+                      <img src="/placeholders/agri-residue.svg" alt="agri-residue" className="w-7 h-7 opacity-80" />
+                    </span>
+                    <span className="text-sm">بقایای کشاورزی</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center">
+                      <img src="/placeholders/ad-digestate.svg" alt="ad-digestate" className="w-7 h-7 opacity-80" />
+                    </span>
+                    <span className="text-sm">تفاله هضم بی‌هوازی (AD)</span>
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <h3 className="text-xl font-semibold">زیست‌توده</h3>
+                  <p className="text-sm mt-2 opacity-90">
+                    مواد اولیه می‌تواند از منابع آلی گوناگون تأمین شود.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <Button
+                  content={"بیشتر بخوانید"}
+                  fontSize={"text-sm"}
+                  padding={"px-5 py-2"}
+                  furtherClasses={"bg-green-600 hover:bg-green-500"}
+                />
+              </div>
+            </motion.div>
+
+            {/* Center CarboFlow card */}
+            <motion.div
+              variants={animationVariants.fadeIn}
+              className="bg-green-900 text-white rounded-3xl p-6 flex flex-col items-center gap-6"
+              style={{ direction: "rtl" }}
+            >
+              <img
+                src="/placeholders/carboflow-machine.svg"
+                alt="carboflow"
+                className="w-64 h-64 object-contain opacity-90"
+              />
+              <div className="text-center flex flex-col gap-2">
+                <h3 className="text-xl font-semibold">CarboFlow</h3>
+                <p className="text-sm opacity-90">
+                  مواد اولیه به‌صورت حرارتی به بیوچار و گاز سنتز تجزیه می‌شود؛ گاز سنتز برای تأمین انرژی فرایند و توان خشک‌سازی‌های موردنیاز سوزانده می‌شود.
+                </p>
+              </div>
+              <Button
+                content={"بیشتر بخوانید"}
+                fontSize={"text-sm"}
+                padding={"px-5 py-2"}
+                furtherClasses={"bg-green-600 hover:bg-green-500"}
+              />
+            </motion.div>
+
+            {/* Right column stacked outputs */}
+            <div className="flex flex-col gap-6">
+              <motion.div
+                variants={animationVariants.fadeRight}
+                className="bg-green-900 text-white rounded-3xl p-6 flex items-center gap-4"
+                style={{ direction: "rtl" }}
+              >
+                <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center shrink-0">
+                  <img src="/placeholders/heat.svg" alt="heat-electricity" className="w-7 h-7 opacity-80" />
+                </span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold">حرارت و برق</h3>
+                  <p className="text-sm mt-1 opacity-90">
+                    انرژی مازاد می‌تواند به‌صورت هوای گرم، آب یا بخار تحویل شود و هم‌تولیدی برق امکان‌پذیر است.
+                  </p>
+                </div>
+                <Button
+                  content={"بیشتر بخوانید"}
+                  fontSize={"text-xs"}
+                  padding={"px-4 py-2"}
+                  furtherClasses={"bg-green-600 hover:bg-green-500 shrink-0"}
+                />
+              </motion.div>
+
+              <motion.div
+                variants={animationVariants.fadeRight}
+                className="bg-green-900 text-white rounded-3xl p-6 flex items-center gap-4"
+                style={{ direction: "rtl" }}
+              >
+                <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center shrink-0">
+                  <img src="/placeholders/biochar.svg" alt="biochar" className="w-7 h-7 opacity-80" />
+                </span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold">بیوچار، بیوکربن و کربن فعال</h3>
+                  <p className="text-sm mt-1 opacity-90">
+                    پیرولیز طیفی از محصولات ارزشمند و مثبت برای اقلیم تولید می‌کند.
+                  </p>
+                </div>
+                <Button
+                  content={"بیشتر بخوانید"}
+                  fontSize={"text-xs"}
+                  padding={"px-4 py-2"}
+                  furtherClasses={"bg-green-600 hover:bg-green-500 shrink-0"}
+                />
+              </motion.div>
+
+              <motion.div
+                variants={animationVariants.fadeRight}
+                className="bg-green-900 text-white rounded-3xl p-6 flex items-center gap-4"
+                style={{ direction: "rtl" }}
+              >
+                <span className="w-12 h-12 rounded-full border-2 border-green-300 flex items-center justify-center shrink-0">
+                  <img src="/placeholders/carbon-cgreenits.svg" alt="carbon-cgreenits" className="w-7 h-7 opacity-80" />
+                </span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold">اعتبارات کربنی</h3>
+                  <p className="text-sm mt-1 opacity-90">
+                    اعتبارات حذف کربن قابل فروش هستند یا می‌توانند برای کاهش انتشار خودتان بازنشسته شوند.
+                  </p>
+                </div>
+                <Button
+                  content={"بیشتر بخوانید"}
+                  fontSize={"text-xs"}
+                  padding={"px-4 py-2"}
+                  furtherClasses={"bg-green-600 hover:bg-green-500 shrink-0"}
+                />
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+        {/* green process section end */}
+
+
         <div style={{ maxWidth: 1200 }} className="p-10 max-md:px-5 mx-auto">
           <motion.h2
             initial="initial"
@@ -286,21 +444,31 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
             viewport={{ once: true, amount: 0.2 }}
             className="text-5xl max-md:text-4xl font-semibold text-center"
           >
-            Exclusive Properties
+            مقالات
           </motion.h2>
           <div className="flex flex-col gap-5 mt-10 max-sm:mt-8">
             <div className=" flex gap-5 max-lg:flex-col">
               <div className="w-2/4 max-lg:w-full">
                 <ExculusivePropertyCard
                   imgSrc={rentHouses[0].mainImage}
-                  titlePart1={"House in "}
+                  titlePart1={""}
                   titlePart2={rentHouses[0].name}
                   pricing={rentHouses[0].price}
                   type={rentHouses[0].type}
                   href={rentHouses[0].id}
                 />
               </div>
-              <div className="w-2/4 gap-5 flex max-lg:w-full max-sm:flex-col">
+              <div className="w-2/4 max-lg:w-full">
+                <ExculusivePropertyCard
+                  imgSrc={rentHouses[1].mainImage}
+                  titlePart1={""}
+                  titlePart2={rentHouses[1].name}
+                  pricing={rentHouses[1].price}
+                  type={rentHouses[1].type}
+                  href={rentHouses[1].id}
+                />
+              </div>
+              {/* <div className="w-2/4 gap-5 flex max-lg:w-full max-sm:flex-col">
                 <ExculusivePropertyCard
                   imgSrc={rentHouses[1].mainImage}
                   titlePart1={"House in "}
@@ -317,9 +485,9 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
                   type={rentHouses[2].type}
                   href={rentHouses[2].id}
                 />
-              </div>
+              </div> */}
             </div>
-            <div className=" flex gap-5 max-lg:flex-col">
+            {/* <div className=" flex gap-5 max-lg:flex-col">
               <div className="w-2/4 gap-5 flex max-lg:w-full max-sm:flex-col">
                 <ExculusivePropertyCard
                   imgSrc={rentHouses[3].mainImage}
@@ -348,14 +516,14 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
                   href={rentHouses[5].id}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* what we do section end */}
 
       {/* appreciation section start */}
-      <div className="bg-white">
+      <div className="bg-white" style={{fontFamily:"Estedad"}}>
         <div
           style={{ maxWidth: 1200 }}
           className="p-10 max-md:px-5 py-28 mx-auto grid grid-cols-2 grid-rows-1 gap-20 max-lg:grid-cols-1 max-lg:grid-rows-2 "
@@ -371,49 +539,48 @@ CarboFlow قادر است طیف وسیعی از مواد اولیه را پیر
               variants={animationVariants.fadeLeft}
               className="text-5xl max-md:text-4xl font-semibold"
             >
-              We use Real Estate to show our appreciation of the world.
+              تیتر
             </motion.h1>
             <motion.p
               variants={animationVariants.fadeLeft}
               className="text-2xl"
             >
-              We provide equity and debt capital globally to back projects that
-              make an impact.
+              توضیحات
             </motion.p>
             <motion.div
               variants={animationVariants.fadeLeft}
               className="grid grid-cols-2 grid-rows-2 gap-10"
             >
               <div className="flex flex-col max-lg:justify-center max-lg:items-center">
-                <h2 className="title-font text-red-500 text-5xl max-md:text-4xl font-semibold">
-                  8
+                <h2 className="title-font text-green-500 text-5xl max-md:text-4xl font-semibold">
+                  80
                 </h2>
                 <p className="text-xl">
-                  Years of seccessful experience in real estate
+                  سال تجربه
                 </p>
               </div>
               <div className="flex flex-col max-lg:justify-center max-lg:items-center">
-                <h2 className="title-font text-red-500 text-5xl max-md:text-4xl font-semibold">
-                  8
+                <h2 className="title-font text-green-500 text-5xl max-md:text-4xl font-semibold">
+                  50
                 </h2>
                 <p className="text-xl">
-                  Years of seccessful experience in real estate
+                  میلیون تن در سال
                 </p>
               </div>
               <div className="flex flex-col max-lg:justify-center max-lg:items-center">
-                <h2 className="title-font text-red-500 text-5xl max-md:text-4xl font-semibold">
-                  8
+                <h2 className="title-font text-green-500 text-5xl max-md:text-4xl font-semibold">
+                  12
                 </h2>
                 <p className="text-xl">
-                  Years of seccessful experience in real estate
+                  کارمند حرفه‌ای
                 </p>
               </div>
               <div className="flex flex-col max-lg:justify-center max-lg:items-center">
-                <h2 className="title-font text-red-500 text-5xl max-md:text-4xl font-semibold">
+                <h2 className="title-font text-green-500 text-5xl max-md:text-4xl font-semibold">
                   8
                 </h2>
                 <p className="text-xl">
-                  Years of seccessful experience in real estate
+                  میلیارد دلار درآمد سالیانه
                 </p>
               </div>
             </motion.div>

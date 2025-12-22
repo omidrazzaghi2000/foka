@@ -73,6 +73,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Estedad';
+  src: url('fonts/estedad/Estedad-FD-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 * {
   margin: 0px;
   padding: 0px;

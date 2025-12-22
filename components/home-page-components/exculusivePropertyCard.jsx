@@ -53,13 +53,13 @@ const ExculusivePropertyCard = ({
         <Link
           onClick={scrollToTop}
           to={`/products/${href}`}
-          className="text-xl font-medium hover:text-red-500 w-fit transition-all"
+          className="text-xl font-medium hover:text-green-500 w-fit transition-all"
         >
           {titlePart1}
           <span className="title-font">{titlePart2}</span>
         </Link>
         <hr />
-        <p className="text-lg">{formatCompactNumber(pricing)} PKR/Month</p>
+        <p className="text-lg" style={{fontFamily:"Estedad"}}>{formatCompactNumber(pricing)}</p>
       </div>
     </div>
   );
